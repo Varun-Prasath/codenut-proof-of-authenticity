@@ -1,0 +1,161 @@
+{
+  "contractName": "AuthRegistry",
+  "chains": [
+    {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "deployedAt": "2025-12-21T05:06:08.835Z"
+    }
+  ],
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "contentHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "uploader",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "score",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "ipfs",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProofPublished",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProof",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "contentHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "score",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "uploader",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "ipfs",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct AuthRegistry.Proof",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getProofCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "uploader",
+          "type": "address"
+        }
+      ],
+      "name": "getProofsByUploader",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "contentHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint8",
+          "name": "score",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "ipfs",
+          "type": "string"
+        }
+      ],
+      "name": "publishProof",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}
